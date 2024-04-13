@@ -1,4 +1,0 @@
-[2m2024-04-14 00:11:18.142[0;39m [32m- INFO[0;39m [35m271316[0;39m [2m---[0;39m [2m[ionShutdownHook][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
--[2m2024-04-14 00:11:18.169[0;39m [32m- INFO[0;39m [35m271316[0;39m [2m---[0;39m [2m[ionShutdownHook][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Shutdown initiated...
--[2m2024-04-14 00:11:18.189[0;39m [32m- INFO[0;39m [35m271316[0;39m [2m---[0;39m [2m[ionShutdownHook][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Shutdown completed.
--
