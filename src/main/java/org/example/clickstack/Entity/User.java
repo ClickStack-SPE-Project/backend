@@ -1,10 +1,7 @@
 package org.example.clickstack.Entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.example.clickstack.Token.Token;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -17,6 +14,8 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 @Table(name="_user")
 public class User implements UserDetails {
     @Getter
@@ -24,13 +23,14 @@ public class User implements UserDetails {
     @GeneratedValue
     private Integer id;
     private String name;
+    @Column(unique = true)
     private String email;
     private String password;
 
     @Enumerated(EnumType.STRING)
     private Role role;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "user")
     private List<Token> tokens;
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
