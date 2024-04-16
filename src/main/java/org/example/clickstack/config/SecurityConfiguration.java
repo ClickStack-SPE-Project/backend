@@ -31,6 +31,8 @@ public class SecurityConfiguration {
                 .requestMatchers("/api/v1/auth/**")
                 .permitAll()
                 .requestMatchers("/api/v1/user/**").hasAnyAuthority(USER.name())
+                .requestMatchers("/api/v1/album/**").hasAnyAuthority(USER.name())
+                .requestMatchers("/api/v1/photos/**").hasAnyAuthority(USER.name())
                 .anyRequest()
                 .authenticated()
                 .and()
