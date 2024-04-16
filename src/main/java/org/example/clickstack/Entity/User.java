@@ -32,6 +32,9 @@ public class User implements UserDetails {
 
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "user")
     private List<Token> tokens;
+
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "user")
+    private List<Album> albums;
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(role.name()));
