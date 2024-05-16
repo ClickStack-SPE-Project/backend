@@ -14,6 +14,7 @@ import org.example.clickstack.config.JwtService;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api/v1/user")
 public class Users {
     @Autowired

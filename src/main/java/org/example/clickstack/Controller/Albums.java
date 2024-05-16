@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*", allowCredentials = "true")
 @RequestMapping("/api/v1/album")
 public class Albums {
     @Autowired
@@ -25,6 +26,8 @@ public class Albums {
     private UserRepository userRepository;
     @Autowired
     private AlbumRepository albumRepository;
+
+
     @GetMapping("/getAllAlbum")
     public ResponseEntity<List<AlbumModel>> getAllAlbum(@RequestHeader(HttpHeaders.AUTHORIZATION) String token){
         try {
