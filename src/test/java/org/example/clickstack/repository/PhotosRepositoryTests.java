@@ -1,10 +1,10 @@
 package org.example.clickstack.repository;
-
 import org.assertj.core.api.Assertions;
 
 import org.example.clickstack.Entity.Album;
 import org.example.clickstack.Entity.User;
 import org.example.clickstack.Repository.AlbumRepository;
+import org.example.clickstack.Repository.PhotosRepository;
 import org.example.clickstack.Repository.UserRepository;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
@@ -17,11 +17,13 @@ import java.util.List;
 import java.util.Optional;
 @DataJpaTest
 @AutoConfigureTestDatabase(connection = EmbeddedDatabaseConnection.H2)
-public class AlbumRepositoryTests {
+public class PhotosRepositoryTests {
     @Autowired
     private AlbumRepository albumRepository;
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private PhotosRepository photosRepository;
 
     @Test
     public void AlbumRepository_SaveAll_ReturnSavedAlbum() {
@@ -214,6 +216,5 @@ public class AlbumRepositoryTests {
 
         Assertions.assertThat(albumReturn).isEmpty();
     }
-
 
 }
