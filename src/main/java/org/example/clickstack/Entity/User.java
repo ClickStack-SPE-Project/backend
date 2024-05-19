@@ -16,7 +16,7 @@ import java.util.List;
 @AllArgsConstructor
 @Getter
 @Setter
-@Table(name="_user")
+@Table(name="clickers")
 public class User implements UserDetails {
     @Getter
     @Id

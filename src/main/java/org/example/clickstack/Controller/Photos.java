@@ -17,7 +17,6 @@ import java.util.List;
 
 
 @RestController
-@CrossOrigin
 @RequestMapping("/api/v1/photos")
 public class Photos {
 
